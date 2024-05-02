@@ -2,8 +2,8 @@ import tkinter as tk
 import tkinter.font as tkFont
 
 
-def button_command():
-    print("command")
+def button_command(label):
+    label.config(text="David Fomenko")
 
 
 if __name__ == "__main__":
@@ -27,7 +27,7 @@ if __name__ == "__main__":
     button["justify"] = "center"
     button["text"] = "Say My Name"
     button.place(x=10, y=50, width=280, height=30)
-    button["command"] = button_command
+    button["command"] = lambda: button_command(label)
 
     label = tk.Label(root)
     ft = tkFont.Font(family='Times', size=10)
